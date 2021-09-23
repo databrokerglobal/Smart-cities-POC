@@ -178,18 +178,7 @@ $allActiveCommunities = App\Models\Community::where('status', 1)->orderBy('sort'
                           <li><a class="dropdown-item" href="{{ route('about.usecase') }}"> {{ trans('home.usecase') }} </a></li>
                           <li><a class="dropdown-item" href="{{ route('help.overview') }}"> {{ trans('home.helpsupport') }} </a></li>
                           <li><a class="dropdown-item" href="{{ route('about.news') }}"> {{ trans('home.updates') }} </a></li>
-                          <li><a class="dropdown-item" href="{{ route('about.media_center') }}"> {{ trans('home.media_center') }} </a></li>
-                          <li class="dropdown-submenu">
-                              <a class="dropdown-item dropdown-toggle content" href="#">Content</a>
-                              <ul class="dropdown-menu content-dropdown">
-                                        <li><a class="dropdown-item" href="{{route('content.smart_cities')}}">Smart Cities</a></li>
-                                        <li><a class="dropdown-item" href="{{route('content.smart_cities_survey_report')}}">Smart Cities and Survey Report</a></li>
-                                        <li><a class="dropdown-item" href="{{route('content.iot_platforms')}}">IOT Platform</a></li>
-                                <li><a class="dropdown-item" href="{{route('content.value_of_data')}}">Value of data</a></li>
-                                <li><a class="dropdown-item" href="{{route('content.white_paper')}}">White Paper</a></li>
-                                <li><a   class="dropdown-item" href="{{route('content.satellite_data_for_agriculture')}}">Satellite data for agriculture</a></li>
-                              </ul>
-                          </li>  
+                          <li><a class="dropdown-item" href="{{ route('about.media_center') }}"> {{ trans('home.media_center') }} </a></li>                          
                           <li><a class="dropdown-item" href="{{ route('contact')}}"> {{ trans('home.contact_us') }} </a></li>
                         </ul>
                       </li>
@@ -464,17 +453,7 @@ $allActiveCommunities = App\Models\Community::where('status', 1)->orderBy('sort'
                       <i class="material-icons">chevron_right</i>
                     </a>
                   </li>
-                  <li class="nav-item dropdown-submenu">
-                              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span>Content</span><i class="material-icons">chevron_right</i></a>
-                            <ul class="dropdown-menu">                            
-                              <li><a href="{{route('content.smart_cities')}}">Smart Cities</a></li>
-                              <li><a href="{{route('content.smart_cities_survey_report')}}">Smart Cities Survey Report</a></li>
-                              <li><a href="{{route('content.iot_platforms')}}">IOT Platform</a></li>
-                              <li><a href="{{route('content.value_of_data')}}">Value of data</a></li>
-                              <li><a href="{{route('content.white_paper')}}">White Paper</a></li>
-                              <li><a href="{{route('content.satellite_data_for_agriculture')}}">Satellite data for agriculture</a></li>
-                            </ul>
-                  </li>  
+                 
                   <li class="dropdown nav-item">
                     <a href="{{ route('contact')}}" class="nav-link">
                       <span>{{ trans('home.contact_us') }} </span>

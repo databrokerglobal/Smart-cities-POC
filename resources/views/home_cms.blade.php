@@ -149,8 +149,8 @@
 		@php 
 			$all_contents =  DB::table('contents')->select('contents.*')->where('isActive',1)->orderBy('sortOrder','ASC')->get();			
 		@endphp 
-		<h1 class="mt-20 mb-20 fs-30 text-bold text-left"> {{ trans('home.databroker_content_hub') }} </h1>
-		<div  class="row">
+		<h1 style="display:none" class="mt-20 mb-20 fs-30 text-bold text-left"> {{ trans('home.databroker_content_hub') }} </h1>
+		<div  class="row" style="display:none">
 				@foreach($all_contents as $content)					
 					<div class="col-md-6 col-lg-6 col-xl-6">
 						<div class="content-card">
