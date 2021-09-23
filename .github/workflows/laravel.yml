@@ -12,6 +12,6 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
           username: "chemflixglobal"
-          host: "ssh045.webhosting.be"
+          host: "ssh041.webhosting.be"
           password: "Secure@123"
           script: 'cd /data/sites/web/chemflixglobal/subsites/smart-cities.databroker.global && ./auto_deploy.sh' #cd /var/www/html/MerqataAPI && ./server_deploy.sh
