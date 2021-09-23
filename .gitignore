@@ -21,5 +21,4 @@ package-lock.json
 .htaccess
 public/css/site_theme.css
 public/favicon.ico
-/config
 auto_deploy.sh
