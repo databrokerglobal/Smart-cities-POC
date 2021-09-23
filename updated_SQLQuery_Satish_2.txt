@@ -1,0 +1,22 @@
+php artisan migrate --path=/database/migrations/2020_07_22_092732_content_pages.php
+
+php artisan migrate --path=/database/migrations/2020_07_22_092759_content_stories.php
+php artisan migrate --path=/database/migrations/2020_07_22_092812_teams.php
+php artisan migrate --path=/database/migrations/2020_07_24_043847_teamtable_add_linkdin_field.php
+
+php artisan migrate --path=/database/migrations/2020_07_24_060251_alter_content_pages_add_subtitle_field.php
+
+php artisan migrate --path=/database/migrations/2020_07_27_100227_add_communities_table_alter_fields.php
+
+php artisan migrate --path=/database/migrations/2020_07_27_100516_alter_themes_table.php
+
+UPDATE `gallery` SET created_at = '2020-06-15 11:32:53'
+UPDATE `communities` SET created_at = '2020-06-15 11:32:53'
+UPDATE `themes` SET created_at = '2020-06-15 11:32:53'
+
+
+php artisan migrate --path=/database/migrations/2020_07_31_100047_alter_article_table_add_top_use_case.php
+
+php artisan migrate --path=/database/migrations/2020_07_31_115642_create_table_our_partners.php
+php artisan migrate --path=/database/migrations/2020_08_11_103539_create_table_for_site_themes.php
+php artisan migrate --path=/database/migrations/2020_08_11_103525_create_table_for_configurations.php

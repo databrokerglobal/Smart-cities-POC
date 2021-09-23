@@ -1,0 +1,119 @@
+body{
+    font-family: #FONT_FAMILY# !important;
+} 
+body{
+    font-size: #FONT_SIZE# !important;
+} 
+html{
+     font-family: #FONT_FAMILY# !important;
+}
+a{
+    font-family: #FONT_FAMILY# !important;
+}
+label{
+    font-family: #FONT_FAMILY# !important;
+}
+p{
+    font-family: #FONT_FAMILY# !important;
+}
+span{
+    font-family: #FONT_FAMILY# !important;
+}
+table{
+    font-family: #FONT_FAMILY# !important;
+}
+h1, h2, h3, h4, h5, h6{
+     font-family: #FONT_FAMILY# !important;
+}   
+.container-fluid .container{
+      font-family: #FONT_FAMILY# !important;
+}
+button{
+      font-family: #FONT_FAMILY# !important;
+}
+.fixed_bg {
+    background-color: #HEADER_COLOR#;
+}
+.app-reveal-section-notify h1 {
+    color: #HEADER_COLOR#;
+}
+.text-primary {
+    color: #HEADER_COLOR# !important;
+}
+#main_menu .navbar-nav li a.active, #main_menu .navbar-nav li:hover a{
+    color: #HEADER_COLOR#;
+}
+.primary-btn, .customize-btn{
+    background-color: #PRIMARY_BUTTON_COLOR#;
+}
+.primary-btn:hover, .customize-btn:hover{
+    background-color: #PRIMARY_BUTTON_COLOR#;
+}
+.secondary-btn, .button.blue-outline{
+    border: 2px solid #HEADER_COLOR#;
+    border-radius: 25px;
+    color: #HEADER_COLOR#;
+    font-family: #FONT_FAMILY#;
+}
+.fixed_bg .dropdown-menu a.dropdown-item:hover {
+    background-color: #HEADER_COLOR# !important;
+}
+.blog-header h1, .cat-header h1 {
+  
+    color: #HEADER_COLOR#;
+}
+.secondary-btn:hover, .button.blue-outline:hover {
+    border: 2px solid #PRIMARY_BUTTON_COLOR#;
+    color: #PRIMARY_BUTTON_COLOR#;
+}
+.footer-section {
+    
+    background-color: #FOOTER_COLOR#;
+   
+}
+.btn-primary {
+   
+    background-color: #PRIMARY_BUTTON_COLOR#;
+    border-color: #PRIMARY_BUTTON_COLOR#;
+    
+}
+.btn-primary:hover {
+    
+    background-color: #PRIMARY_BUTTON_COLOR#;
+    border-color: #PRIMARY_BUTTON_COLOR#;
+}
+.btn-focus {
+    color: #fff;
+    background-color:  #SECONDARY_BUTTON_COLOR#;
+    border-color:  #SECONDARY_BUTTON_COLOR#;
+}
+.btn-focus:hover {
+   
+    background-color: #SECONDARY_BUTTON_COLOR#;
+    border-color: #SECONDARY_BUTTON_COLOR#;
+}
+.btn-outline-focus.m-btn--air, .btn-focus.m-btn--air, .m-btn--gradient-from-focus.m-btn--air {
+    -webkit-box-shadow: 0px 5px 3px 2px #SECONDARY_BUTTON_COLOR# !important;
+    box-shadow: 0px 5px 3px 2px #SECONDARY_BUTTON_COLOR# !important;
+}
+.btn-focus:not(:disabled):not(.disabled):active, .btn-focus:not(:disabled):not(.disabled).active, .show > .btn-focus.dropdown-toggle {
+    color: #fff;
+    background-color: #SECONDARY_BUTTON_COLOR#;
+    border-color: #SECONDARY_BUTTON_COLOR#;
+}
+.btn-outline-focus.m-btn--air.focus, .btn-outline-focus.m-btn--air:focus, .btn-outline-focus.m-btn--air:hover, .btn-focus.m-btn--air.focus, .btn-focus.m-btn--air:focus, .btn-focus.m-btn--air:hover, .m-btn--gradient-from-focus.m-btn--air.focus, .m-btn--gradient-from-focus.m-btn--air:focus, .m-btn--gradient-from-focus.m-btn--air:hover {
+    -webkit-box-shadow: 0px 5px 3px 2px  #SECONDARY_BUTTON_COLOR# !important;
+    box-shadow: 0px 5px 3px 2px  #SECONDARY_BUTTON_COLOR# !important;
+}
+
+
+
+
+
+
+.search-container{
+		background:#HEADER_COLOR# !important;
+}
+.app-peek-section h1{
+    color: #HEADER_COLOR#;
+}

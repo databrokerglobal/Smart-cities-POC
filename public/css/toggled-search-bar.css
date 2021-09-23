@@ -1,0 +1,74 @@
+.search-form-wrapper {
+    display: none;
+    position: absolute;
+    left: 70%;
+    right: 0;
+    padding: 12px 15px 0px 15px;
+    /* margin-top: 50px; */
+    background: url(/resources/images/misc/bg_search-open.png) right center no-repeat #faf8f8;
+    width: 25%;
+}
+.search-form>.input-group>.form-control {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: inherit;
+    width: 70%;
+    margin-bottom: 0;
+}
+.search-form>.input-group>.input-group-addon:not(:first-child) {
+    border-left: 0;
+    padding: 0 2%;
+}
+.search-form-wrapper.open {
+    display: block;
+}
+.btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa {
+    position: relative;
+    display: inline-block;
+    top: -8px;
+    right: 9px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+.btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa-mysearch{
+    position: relative;
+    display: inline-block;
+    top: -1px;
+    right: 2px;
+    /* margin-top: -1em; */
+    /* margin-bottom: -1em; */
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+.btn.btn-search {
+    width: 14px;
+    height: 15px;
+    margin-bottom: 30%;
+    /* background: #06038d !important; */
+    background: #c21b1b !important;
+    color: white;
+}
+.btn.btn-search:hover {
+    width: 14px;
+    height: 15px;
+    margin-bottom: 30%;
+    background: #c21b1b;
+    /* background: #06038d; */
+    color: white;
+}
+.btn.btn-search:focus {
+    width: 14px;
+    height: 15px;
+    margin-bottom: 30%;
+    background: #06038d;
+    color: white;
+}
+.btn.btn-search:active {
+    width: 14px;
+    height: 15px;
+    margin-bottom: 30%;
+    background: #06038d;
+    color: white;
+}

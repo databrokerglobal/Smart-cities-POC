@@ -1,0 +1,144 @@
+
+ALTER TABLE `bids` ADD `isSellerViewed` BOOLEAN NOT NULL DEFAULT FALSE AFTER `bidStatus`;
+ALTER TABLE `bids` ADD `isBuyyerViewed` BOOLEAN NOT NULL DEFAULT FALSE AFTER `isSellerViewed`;
+
+
+CREATE TABLE `sharingorganisations` (
+ `orgIdx` int(10) NOT NULL AUTO_INCREMENT,
+ `orgName` varchar(50) NOT NULL,
+ `providerIdx` int(10) NOT NULL,
+ `isActive` tinyint(1) NOT NULL DEFAULT 1,
+ `created_at` timestamp NULL DEFAULT NULL,
+ `updated_at` timestamp NULL DEFAULT NULL,
+ PRIMARY KEY (`orgIdx`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `orgusers` (
+ `orgUserIdx` int(10) NOT NULL AUTO_INCREMENT,
+ `orgIdx` int(10) NOT NULL,
+ `orgUserEmail` varchar(150) NOT NULL,
+ `isActive` tinyint(1) NOT NULL DEFAULT 1,
+ `isUserRegistered` tinyint(1) NOT NULL,
+ `created_at` timestamp NULL DEFAULT NULL,
+ `updated_at` timestamp NULL DEFAULT NULL,
+ PRIMARY KEY (`orgUserIdx`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `productsahres` (
+ `shareIdx` int(10) NOT NULL AUTO_INCREMENT,
+ `productIdx` int(10) NOT NULL,
+ `orgUserIdx` int(10) NOT NULL,
+ `isActive` tinyint(1) NOT NULL DEFAULT 1,
+ `created_at` timestamp NULL DEFAULT NULL,
+ `updated_at` timestamp NULL DEFAULT NULL,
+ PRIMARY KEY (`shareIdx`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+ALTER TABLE `offerProducts` ADD `offerType` VARCHAR(15) NOT NULL AFTER `did`;
+
+
+05-11-2020
+==========
+ALTER TABLE `contacts` ADD `isOptCommunication` BOOLEAN NOT NULL DEFAULT FALSE AFTER `contactStatus`;
+ALTER TABLE `home_featured_data` ADD `offerIdx` INT(11) NOT NULL AFTER `providerIdx`;
+ALTER TABLE `purchases` CHANGE `from` `from` TIMESTAMP NULL DEFAULT NULL;
+ALTER TABLE `purchases` CHANGE `to` `to` TIMESTAMP NULL DEFAULT NULL;
+
+07-01-2021
+============
+CREATE TABLE `dxc_versions` (
+ `id` int(10) NOT NULL AUTO_INCREMENT,
+ `version` varchar(50) NOT NULL,
+ `plotform` varchar(25) NOT NULL,
+ `whats_new` varchar(100) NOT NULL,
+ `instruction_path` text NOT NULL,
+ `setup_file_path` text NOT NULL,
+ `isActive` tinyint(1) NOT NULL DEFAULT '1',
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+25-01-2021
+===========
+CREATE TABLE `contactCommercials` (
+ `id` int(10) NOT NULL AUTO_INCREMENT,
+ `full_name` varchar(100) NOT NULL,
+ `email` varchar(150) NOT NULL,
+ `companyName` varchar(100) NOT NULL,
+ `regionIdx` int(10) NOT NULL,
+ `contact_number` varchar(15) NOT NULL,
+ `bank_account_number` varchar(25) NOT NULL,
+ `amount_to_be_redeemed` decimal(10,2) NOT NULL,
+ `iban_number` varchar(100) NOT NULL,
+ `bank_name` varchar(50) NOT NULL,
+ `branch_code` varchar(50) NOT NULL,
+ `company_reg_no` varchar(50) NOT NULL,
+ `company_tax_no` varchar(50) NOT NULL,
+ `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `updated_at` timestamp NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1
+
+
+04-02-2021
+==========
+
+CREATE TABLE `product_price_mapping` (
+ `ppmIdx` int(10) NOT NULL AUTO_INCREMENT,
+ `productIdx` int(11) NOT NULL,
+ `productPrice` decimal(10,2) NOT NULL,
+ `productAccessDays` varchar(45) NOT NULL,
+ `created_at` timestamp NOT NULL,
+ `updated_at` timestamp NOT NULL,
+ PRIMARY KEY (`ppmIdx`)
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=latin1
+
+ALTER TABLE `bids` ADD `productAccessDays` VARCHAR(45) NOT NULL AFTER `productIdx`;
+ALTER TABLE `bids` ADD `actualProductPrice` DECIMAL(10,2) NOT NULL AFTER `productIdx`;
+ALTER TABLE `purchases` CHANGE `productAccessDays` `productAccessDays` VARCHAR(45) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+20-04-2021
+==========
+CREATE TABLE `searched_keys` (
+ `id` int(10) NOT NULL AUTO_INCREMENT,
+ `search_key` varchar(100) NOT NULL,
+ `searched_by` int(10) NOT NULL,
+ `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+ `updated_at` datetime NOT NULL DEFAULT current_timestamp(),
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+
+19-07-2021
+==========
+ALTER TABLE `users` CHANGE `firstname` `firstname` VARCHAR(25) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `lastname` `lastname` VARCHAR(25) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `email` `email` VARCHAR(150) CHARACTER SET armscii8 COLLATE armscii8_general_ci NULL DEFAULT NULL, CHANGE `businessName` `businessName` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `role` `role` VARCHAR(25) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `jobTitle` `jobTitle` VARCHAR(75) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
+
+13-07-2021
+=========
+CREATE TABLE `contents` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `content_title` varchar(200) NOT NULL,
+  `meta_title` varchar(100) NOT NULL,
+  `meta_data` text NOT NULL,
+  `content_image_path` varchar(500) NOT NULL,
+  `content_page_url` text NOT NULL,
+  `sortOrder` int(2) NOT NULL,
+  `isActive` tinyint(1) NOT NULL DEFAULT '1',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4
+
+20-08-2021
+==========
+ALTER TABLE `transactions` ADD `deal_index` VARCHAR(20) NULL DEFAULT NULL AFTER `amount`;
+ALTER TABLE `transactions` ADD `saleIdx` INT(10) NULL AFTER `amount`;
+ALTER TABLE `sales` ADD `deal_index` VARCHAR(20) NOT NULL AFTER `to`;
+
+09-09-2021
+==========
+CREATE TABLE `buyer_sale_feedback` ( `saleIdx` INT(11) NOT NULL , `isBuyerSatisfiedWithData` 
+BOOLEAN NOT NULL DEFAULT FALSE ,
+ `buyerComment` INT NOT NULL , `created_at` TIMESTAMP NOT NULL , `updated_at` TIMESTAMP NOT NULL ) ENGINE = InnoDB;
+
+ ALTER TABLE `buyer_sale_feedback` CHANGE `buyerComment` `buyerComment` TEXT NOT NULL;

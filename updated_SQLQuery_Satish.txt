@@ -1,0 +1,81 @@
+  // Following tables needs to copy with data for About Databroker page [added on 23 July 2020]
+`content_pages`
+`content_stories`
+`teams`
+
+ALTER TABLE `gallery`   
+  CHANGE `created_at` `created_at` TIMESTAMP NULL,
+  CHANGE `updated_at` `updated_at` TIMESTAMP NULL;
+
+----------SQL Changes-----
+13 Oct 2020
+ALTER TABLE `articles` ADD COLUMN `slug` VARCHAR(255) NULL AFTER `isUseCase`;
+ALTER TABLE `offers`   ADD COLUMN `slug` VARCHAR(255) NULL AFTER `updated_at`;
+
+ALTER TABLE `companies` ADD COLUMN `slug` VARCHAR(255) NULL AFTER `updated_at`;
+ALTER TABLE `regions` ADD COLUMN `slug` VARCHAR(255) NULL AFTER `updated_at`;
+ALTER TABLE `home_featured_data` ADD COLUMN `slug` VARCHAR(255) NULL AFTER `updated_at`;
+ALTER TABLE `home_marketplace`   ADD COLUMN `slug` VARCHAR(255) NULL AFTER `updated_at`; 
+
+php artisan migrate --path=/database/migrations/2020_10_16_112319_alter_site_themes.php
+php artisan migrate --path=/database/migrations/2020_10_15_093833_alter_confiuration_table.php
+php artisan migrate --path=/database/migrations/2020_10_30_124405_create_slug_on_comunities.php
+ALTER TABLE `communities`  ADD COLUMN `overview` TEXT NULL AFTER `description`;
+---Deployed above changes on Test on 3 Nov-----
+
+
+
+ALTER TABLE `site_configurations`   
+  ADD COLUMN `app_name` VARCHAR(191) NULL AFTER `footer_logo`,
+  ADD COLUMN `app_slogan` VARCHAR(191) NULL AFTER `app_name`; 
+  
+  php artisan migrate --path=/database/migrations/2020_11_09_100829_alter_communities_add_meta.php
+  php artisan migrate --path=/database/migrations/2020_11_09_111949_alter_home_tredning_add_offer_i_d.php
+  
+  ALTER TABLE `providers` ADD COLUMN `status` BOOLEAN DEFAULT 1  NULL AFTER `updated_at`;
+  ALTER TABLE `providers` ADD COLUMN `slug` VARCHAR(255) NULL AFTER `status`;
+----Above changes deployed on production on 24th Dec 2020----
+  php artisan migrate --path=/database/migrations/2020_12_29_093348_create_user_activity_log.php
+
+  ALTER TABLE `user_activity_log`   
+  CHANGE `action_detail` `action_detail` TEXT CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;
+
+  ------11 May 2021 --- for SEO purpose---
+  ALTER TABLE `gallery`   
+  ADD COLUMN `img_title` VARCHAR(191) NULL AFTER `updated_at`,
+  ADD COLUMN `img_tooltip` VARCHAR(191) NULL AFTER `img_title`;
+
+  ------10 June 2021 --- for sorting communities---
+ ALTER TABLE `communities` ADD `sort` INT NULL DEFAULT '0' AFTER `meta_desc`;
+ -------23 June 2021 --- for meta description at content pages
+ ALTER TABLE `content_pages` ADD `meta_description` VARCHAR(191) NULL DEFAULT NULL AFTER `sub_title`;
+ -------02 July 2021 --- for revert back changes of content_pages
+ ALTER TABLE `content_pages` DROP `meta_description`;
+ ------20 July 2021 --- for making contents table id column auto incremneted and primary key
+ ALTER TABLE `contents` CHANGE `id` `id` INT(10) NOT NULL AUTO_INCREMENT, ADD PRIMARY KEY (`id`);
+ ------25 July 2021 --- for making community discover table
+CREATE TABLE `community_discover` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` varchar(255) DEFAULT NULL,
+  `communityIdx` int(11) DEFAULT NULL,
+  `offerIdx` int(11) DEFAULT NULL,
+  `discription` varchar(255) DEFAULT NULL,
+  `order` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+------25 July 2021 --- for making new offers in community table
+CREATE TABLE `community_new_offers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `communityIdx` int(11) DEFAULT NULL,
+  `offerIdx` int(11) DEFAULT NULL,
+  `order` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+

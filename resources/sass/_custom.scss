@@ -1,0 +1,252 @@
+@import 'variables';
+
+// Class for Colors
+.bk-success {
+	background-color: $color-success !important;
+}
+.bk-primary {
+	background-color: $color-primary !important;	
+}
+
+.bk-warn {
+	background-color: $color-warn !important;	
+}
+
+.bk-basic {
+	background-color: $color-basic !important;	
+}
+
+.bk-grey-1 {
+	background-color: $color-grey-1 !important;	
+}
+.bk-grey-2 {
+	background-color: $color-grey-2 !important;	
+}
+.bk-grey-3 {
+	background-color: $color-grey-3 !important;	
+}
+.bk-grey-4 {
+	background-color: $color-grey-4 !important;	
+}
+
+.color-success {
+	color: $color-success !important;
+}
+.color-primary {
+	color: $color-primary !important;	
+}
+
+.color-warn {
+	color: $color-warn !important;	
+}
+
+.color-basic {
+	color: $color-basic !important;	
+}
+
+.color-grey-1 {
+	color: $color-grey-1 !important;	
+}
+.color-grey-2 {
+	color: $color-grey-2 !important;	
+}
+.color-grey-3 {
+	color: $color-grey-3 !important;	
+}
+.color-grey-4 {
+	color: $color-grey-4 !important;	
+}
+
+// Typography
+@media (min-width: $screen-sm-min) {
+	.h1-big
+	{
+		font: $font-h1-big !important;	
+		letter-spacing: 1.14px !important;
+	}
+	.h1-smaller
+	{
+		font: $font-h1-smaller !important;	
+		letter-spacing: 0.71px !important;
+	}
+	.h2
+	{
+		font: $font-h2 !important;	
+		letter-spacing: 0.54px !important;
+	}
+	.h3
+	{
+		font: $font-h3 !important;	
+		letter-spacing: 0.37px !important;
+	}
+	.h4-intro
+	{
+		font: $font-h4-intro !important;
+		letter-spacing: 0 !important;
+	}
+	.paragraph
+	{
+		font: $font-paragraph !important;	
+		letter-spacing: 0 !important;
+	}
+	.paragraph-small
+	{
+		font: $font-paragraph-small !important;	
+		letter-spacing: 0 !important;
+	}
+	.button-font
+	{
+		font: $font-button !important;	
+		letter-spacing: 0.25px !important;
+	}
+}
+
+@media (max-width: $screen-sm-max) {
+	.h1-big-sm
+	{
+		font: $font-h1-big-sm !important;	
+		letter-spacing: 0.75px !important;
+	}
+	.h1-smaller-sm
+	{
+		font: $font-h1-smaller-sm !important;	
+		letter-spacing: 0.54px !important;
+	}
+	.h2-sm
+	{
+		font: $font-h2-sm !important;	
+		letter-spacing: 0.43px !important;
+	}
+	.h3-sm
+	{
+		font: $font-h3-sm !important;	
+		letter-spacing: 0.32px !important;
+	}
+	.h4-intro-sm
+	{
+		font: $font-h4-intro-sm !important;
+		letter-spacing: 0 !important;
+	}
+	.paragraph-sm
+	{
+		font: $font-paragraph-sm !important;	
+		letter-spacing: 0 !important;
+	}
+	.paragraph-small-sm
+	{
+		font: $font-paragraph-small-sm !important;	
+		letter-spacing: 0 !important;
+	}
+	
+}
+
+// Buttons
+.btn-primary {
+	background: $color-warn 0% 0% no-repeat padding-box !important;
+	border-color: $color-warn !important;
+	box-shadow: 0px 15px 25px #FF6B6B26 !important;
+    border-radius: 30px !important;
+    font: $font-button !important;
+	letter-spacing: 0.25px !important;
+	color: #FFFFFF !important;
+}
+
+.btn-primary:hover {
+	background: #E15757 0% 0% no-repeat padding-box !important;
+	border-color: #E15757 important;
+	box-shadow: 0px 15px 25px #FF6B6B33 !important;
+}
+.btn-primary:focus {
+	background: #E15757 0% 0% no-repeat padding-box !important;
+	border-color: #E15757 important;
+	box-shadow: 0px 2px 4px #FF6B6B4D !important;
+}
+
+.btn-secondary {
+	border: 2px solid #06038D !important;	
+	border-color: #06038D important;
+    border-radius: 30px !important;
+    font: $font-button !important;
+	letter-spacing: 0.25px !important;
+	color: #06038D !important;
+}
+
+.btn-secondary:hover {
+	border: 2px solid #FF6B6B !important;
+	border-color: #FF6B6B important;
+	color: #FF6B6B !important;
+}
+.btn-secondary:focus {
+	border: 2px solid #FF6B6B !important;
+	border-color: #FF6B6B important;
+	color: #FF6B6B !important;
+}
+
+// Checkbox
+.form-check .form-check-input:checked~.form-check-sign .custom-check {
+    background: $color-success !important;
+}
+
+// Radiobutton
+.form-check .form-check-input:checked~.circle .custom-check {
+    background: $color-success !important;
+}
+
+.form-check .form-check-input:checked~.circle {
+    border-color: unset;
+}
+
+// Input
+.round-inputbox {
+	border: 2px solid $color-grey-2 !important;
+	border-radius: 24px !important;	
+	color: #020A09 !important;	
+	background-image: unset;
+	background: unset !important;
+}
+
+.round-inputbox.error {
+	border-color: $color-warn !important;	
+	color: $color-warn !important;	
+}
+
+.round-inputbox.success {
+	border-color: $color-success !important;	
+	color: $color-warn !important;	
+}
+
+// register page
+#register_title {
+	max-width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+#login_section {
+	max-width: 400px;
+}
+
+#login_section .customize-btn, #register_section .customize-btn, #register_link {
+    height: 38px;    
+    width: 170px;    
+    font-size: 12px;    
+    margin: 0;
+    line-height: 25px !important;
+}
+
+#register_link {
+	font-size: 12px !important;
+    border-width: 1px !important;
+}
+
+#forgot_pass_link, #login_link {
+	font-size: 12px;
+    float: right;
+    text-transform: unset;
+}
+
+#login_title {	
+}
+
+#login_section p {    
+}

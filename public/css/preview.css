@@ -1,0 +1,21 @@
+.button.secondary-btn.mgh10{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #b7b7b7;
+}
+.preview{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 999999999;
+}
+.white-text{
+    color: white;
+}
+.gray-text{
+    color: #b7b7b7;
+}
+.button.secondary-btn.mgh10:hover{
+    color: white;
+    border: 2px solid white;
+}

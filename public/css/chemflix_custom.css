@@ -1,0 +1,7 @@
+.fixed_bg {
+    background: rgb(0,61,167);
+    background: linear-gradient(90deg, rgba(0,61,167,1) 14%, rgba(162,86,251,1) 100%);
+}
+/* .body{
+    font-family: sans-sharp !important;
+} */
