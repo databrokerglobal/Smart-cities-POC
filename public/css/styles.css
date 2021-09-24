@@ -259,9 +259,9 @@ body {
 .app-reveal-section-mark {
     position: absolute;
     top: 300px;
-    right: 0;
+    right: 15%;
     z-index: 1;
-    width: 50%;
+    
 }
 
 .app-reveal-section-mark2 {
