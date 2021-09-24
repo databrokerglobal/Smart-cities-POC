@@ -13,7 +13,7 @@
 <div class="container-fluid app-wapper header-section">	
   
     <div class="container">
-    	<div class="app-section app-reveal-section align-items-center">
+    	<div >
 			<div class="app-reveal-section-notify" style="margin-bottom: 0;padding-left: 1%;">
                 <h1>Welcome to {{APPLICATION_NAME}} </h1>                
 	            <p>{{ APPLICATION_SLOGAN }}</p>
