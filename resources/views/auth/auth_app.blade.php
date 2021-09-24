@@ -224,15 +224,7 @@
                         </a>
                         <a href="{{env('TWITTER_LINK')}}" rel="nofollow noopener noreferrer" target="_blank">
                           <img src="{{ asset('/images/social/twitter.png') }}">
-                        </a>
-                        
-                        <a href="{{env('LINKEDIN_LINK')}}" rel="nofollow noopener noreferrer" target="_blank">
-                          <img  src="{{ asset('/images/social/linkedin.png') }}">
-                        </a>                           
-                         
-                        <a href="{{env('GITHUB_LINK')}}" rel="nofollow noopener noreferrer" target="_blank">
-                          <img src="{{ asset('/images/social/github.png') }}">
-                        </a>                                              
+                        </a>                                                                                          
                     </div>
                   </div>                  
               </div>
