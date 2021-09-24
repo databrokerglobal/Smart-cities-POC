@@ -14,11 +14,11 @@ input:-webkit-autofill:active  { /*autofilled input background color*/
 }	
 .btn.active, .btn.btn-default.active, .btn.btn-default:active, .btn:active, .open>.btn.btn-default.dropdown-toggle, .open>.btn.dropdown-toggle, .show>.btn.btn-default.dropdown-toggle, .show>.btn.dropdown-toggle{
 	color: #BAC0C5;
-	background: #E15757;
+	background: #9c326c;
 }
 .btn.btn-default.focus, .btn.btn-default:focus, .btn.focus, .btn:focus{
 	color: #BAC0C5;
-	background: #E15757;
+	background: #9c326c;
 }
 .btn-transparent:hover, .btn-transparent:focus, .btn-transparent:active{
 	background-color: transparent;	
@@ -688,13 +688,12 @@ a.dropdown-toggle:after{
 	-webkit-box-align: center;
     -webkit-align-items: center;
 }
-.app-top-bar .app-brand{
-	/* margin:30px auto; */
-	margin-top: 30px;
-	margin-right: auto;
-	margin-left: 38%;
-	margin-bottom: 30px;
-	-webkit-box-align: center;
+.app-top-bar .app-brand {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: 38%;
+    margin-bottom: 10px;
+    -webkit-box-align: center;
 }
 
 #main_menu{
@@ -2034,7 +2033,7 @@ a[data-target='#mediaLibraryModal']:hover{
 	background: #f7f7242e
 }
 .accept-btn{
-	background: #FF6B6B 0% 0% no-repeat padding-box !important;
+	background: #9c326c 0% 0% no-repeat padding-box !important;
 }
 .dxctable th{
 	background: gray;
