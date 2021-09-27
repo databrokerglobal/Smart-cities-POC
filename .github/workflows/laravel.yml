@@ -8,7 +8,7 @@ jobs:
   laravel-tests:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy to test
+    - name: Deploy to prod
       uses: appleboy/ssh-action@master
       with:
           username: "chemflixglobal"
