@@ -75,8 +75,8 @@
 
 <div class="container-fluid app-wapper">
 	<div class="section_splitor"></div>    
-    <div style="background: url({{ asset('images/patterns/background_01.png') }});background-position: right;background-repeat: no-repeat;background-size: contain;">
-        <div style="background: url({{ asset('images/patterns/background_02.png') }});background-position: left;background-repeat: no-repeat;background-size: contain;">
+    <div style="background: url({{ asset('images/patterns/background_01.svg') }});background-position: right;background-repeat: no-repeat;background-size: contain;">
+        <div style="background: url({{ asset('images/patterns/background_02.svg') }});background-position: left;background-repeat: no-repeat;background-size: contain;">
             <div class="app-section app-peek-section align-items-center">
                 <div class="app-monetize-section-item0"></div>
                 <h1 class="fs-30" style="margin-bottom: 10px;">{{ trans('pages.what_business_challenge') }}</h1>

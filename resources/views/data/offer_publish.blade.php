@@ -60,8 +60,8 @@
 </div>
 <div class="container-fluid app-wapper">
 	<div class="section_splitor"></div>    
-    <div style="background: url({{asset('images/patterns/background_01.png')}});background-position: right;background-repeat: no-repeat;background-size: contain;">
-        <div style="background: url({{asset('images/patterns/background_02.png')}});background-position: left;background-repeat: no-repeat;background-size: contain;">
+    <div style="background: url({{asset('images/patterns/background_01.svg')}});background-position: right;background-repeat: no-repeat;background-size: contain;">
+        <div style="background: url({{asset('images/patterns/background_02.svg')}});background-position: left;background-repeat: no-repeat;background-size: contain;">
         	<div class="container">
         		<div class="testimonials">
 	            	<div class="testimonial">
