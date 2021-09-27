@@ -2471,6 +2471,9 @@ ul.dropdown-menu.show li a {
 		background: none;
 		background-color: none;
 	}
+	.cookie-accept .cookie-section{
+		display: block !important;
+	}
 }
 
 @media (max-width: 991px){
