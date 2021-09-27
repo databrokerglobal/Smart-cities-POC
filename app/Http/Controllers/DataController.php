@@ -640,14 +640,13 @@ class DataController extends Controller
         foreach ($communities as $key => $community) {
             if($community->slug == $request->community)
                 $category = $community->slug;
-        }
-      
+        }              
         $curTheme = Theme::where('themeName', str_replace( '-', ' ', strtolower($request->theme)))->get()->first();
-        $communityDetail = Community::where('slug',ucfirst($category))->first();
+        $communityDetail = Community::where('slug',ucfirst($category))->first();        
         session(['curCommunity'=>$category]);
 
         $dataoffers = Offer::with(['region', 'provider'])
-            ->select('offers.*','offers.slug as offer_slug','providers.*','companies.*','companies.slug as company_slug','communities.slug as community_slug')
+            ->select('offers.*','offers.slug as offer_slug','providers.*','companies.*','companies.slug as company_slug','communities.slug as community_slug','themes.themeName')
             ->leftjoin('offerThemes', 'offerThemes.offerIdx', '=',  'offers.offerIdx')
             ->leftjoin('themes', 'themes.themeIdx', '=',  'offerThemes.themeIdx')                    
             ->join('communities', 'offers.communityIdx', '=',  'communities.communityIdx')
@@ -657,9 +656,10 @@ class DataController extends Controller
             ->where('communities.communityName', ucfirst($category))
             ->where('offers.status', 1)
             ->orderby('offers.offerIdx', 'DESC')
-            ->get();
+            ->get();        
         $dataoffer = array();
-        foreach ($dataoffers as $key => $doffer) {
+       
+        foreach ($dataoffers as $key => $doffer) {                     
             if(str_replace( ' ', '-', strtolower($doffer->themeName))==$request->theme)
                 array_push($dataoffer, $doffer);
         }
