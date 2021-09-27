@@ -182,8 +182,8 @@
 
 <div class="container-fluid app-wapper" id="home-mobile-4">
 	<div class="section_splitor_mobile"></div>    
-	<div style="background: url({{ asset('images/patterns/background_01.png') }});background-position: right;background-repeat: no-repeat;background-size: contain;">
-        <div style="background: url({{ asset('images/patterns/background_02.png') }});background-position: left;background-repeat: no-repeat;background-size: contain;">
+	<div style="background: url({{ asset('images/patterns/background_01.svg') }});background-position: right;background-repeat: no-repeat;background-size: contain;">
+        <div style="background: url({{ asset('images/patterns/background_02.svg') }});background-position: left;background-repeat: no-repeat;background-size: contain;">
              <div class="app-section app-peek-section align-items-center">
                 <div class="app-monetize-section-item0"></div>
                 <h2 class="fs-30 text-center mb-10">{{ trans('home.looking_supercharge')}}</h2>
